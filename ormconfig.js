@@ -1,12 +1,13 @@
-[
+module.exports = [
   {
     "name": "default",
     "type": "postgres",
-    "host": "localhost",
-    "port": 5432,
-    "username": "docker",
-    "password": "docker",
-    "database": "gostack_gobarber",
+    "url": process.env.DATABASE_URL,
+    // "host": "localhost",
+    // "port": 5432,
+    // "username": "docker",
+    // "password": "docker",
+    // "database": "gostack_gobarber",
     "entities": [
       "./src/modules/**/infra/typeorm/entities/*.ts"
     ],
